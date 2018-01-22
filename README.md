@@ -78,7 +78,7 @@ Created database 'Codaisseurify_test'
 
 *Create remote repository on github.com*
 
-https://github.com/ZjanPreijde/Codaisseurify
+https://github.com/ZjanPreijde/Codaisseurify-II
 
 
 
@@ -437,6 +437,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
 end
 ```
+
+<u>Stumbled up on</u> :
+
+* Don't use names for model attributes that are to generic, like 'Photo.image' for an image_url. When copy-pasting the uploader-attribute connection, it will look like standard syntax, in stead of trying to point to an actual differently named model attribute (e.g. 'Artist.image_url').
+* Rails and Rspec just throw errors at you, but don't know where you went wrong, so can't tell you.
+* Naming string to hold image URL in one project 'Photo.image' seriously destroyed my weekend when copy-pasting '*mount_uploader :image, ImageUploader*' from apps/models/Photo.rb to another project. I thought ':image' was part of the uploader syntax.
 
 
 
