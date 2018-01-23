@@ -87,7 +87,7 @@ https://github.com/ZjanPreijde/Codaisseurify-II
 ```shell
 $ git add . 
 $ git commit -m "Created app Codaisseurify"
-$ git remote add origin git@github.com:ZjanPreijde/Codaisseurify.git
+$ git remote add origin git@github.com:ZjanPreijde/Codaisseurify-II.git
 $ git push origin master
 ```
 
