@@ -1,9 +1,12 @@
 # spec spec/features/home_page_spec.rb
 require 'rails_helper'
 
-RSpec.describe "Home Page" do
-  it "should return Rails default Home Page text" do
-    visit root_url
-    expect(page).to have_content "Pages#home"
+RSpec.feature "Home Page", :type => :feature do
+  # let(:artist) { build :artist, name: "Artist" }
+  # let(:artists_path) = '/'
+  # @artists_path = '/'
+  scenario "User visits Home Page" do
+    visit "/"
+    expect(page).to have_text( "Codaisseurify!")
   end
 end
